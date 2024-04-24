@@ -11,9 +11,35 @@ import createTheme from '@mui/material/styles/createTheme';
 
 const theme = createTheme({
   typography: {
-    fontFamily: "Ubuntu"
+    fontFamily: "Ubuntu "
   },
   components: {
+    MuiTypography: {
+      variants: [
+        {
+          props: { variant: 'p' },
+          style: {
+            fontSize: '20px',
+          },
+        },
+        {
+          props: { variant: 'h1' },
+          style: {
+            fontSize: '64px',
+            color: "#d0312d",
+            fontWeight: 500
+          },
+        },
+        {
+          props: { variant: 'h2' },
+          style: {
+            fontSize: '28px',
+            color: "white",
+            fontWeight: 500
+          },
+        },
+      ],
+    },
     MuiDrawer: {
       styleOverrides: {
         paper: {
