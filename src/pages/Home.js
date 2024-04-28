@@ -1,4 +1,4 @@
-import { Divider, Grid, List, ListItem, ListItemText, Stack, Typography } from '@mui/material'
+import { Divider, Grid, Link, List, ListItem, ListItemButton, ListItemText, Stack, Typography } from '@mui/material'
 import React from 'react'
 
 const Home = () => {
@@ -12,8 +12,8 @@ const Home = () => {
           </Typography>
 
           <Divider sx={{bgcolor: "white"}} />
-          <Typography variant="p" component="div"> 
-            The point of this preset is offer an experience that is visually elevated, while also being (in my opinion) truest to the original based on the options availiable. It also streamlines the process of using SYW, skipping the option selection process. If you would like to know why the option I picked are important to the FFVII expereince, you can go here to learn more in general, and individual options
+          <Typography variant="h4" component="div"> 
+            The point of this preset is offer an experience that is visually elevated, while also being (in my opinion) truest to the original based on the options availiable. It also streamlines the process of using SYW, skipping the option selection process. If you would like to know why the options I picked are important to the FFVII experience, you can go here to learn more in general, and individual options
           </Typography>
          
 
@@ -29,16 +29,36 @@ const Home = () => {
                 <ListItemText>
                   Final Fantasy VII for PC
                 </ListItemText>
+                <List sx={{listStyleType:"circle",
+                    '& .MuiListItem-root': {
+                      display: 'list-item',
+                     }, pl: 4}}>
                   <ListItem>
                     <ListItemText>
                       Valid copies are the 97 release or the Steam release
                     </ListItemText>
                   </ListItem>
+                </List>
               </ListItem>
               <ListItem>
                 <ListItemText>
                   Satsuki Yatoshi
                 </ListItemText>
+                <List sx={{listStyleType:"circle",
+                    '& .MuiListItem-root': {
+                      display: 'list-item',
+                     }, pl: 4}}>
+                  <ListItem>
+                    <ListItemText>
+                      <Link href="https://forums.qhimm.com/index.php?PHPSESSID=lglja328tm5fqpvtpkten0j7g1&topic=21616">Link</Link>
+                    </ListItemText>
+                  </ListItem>
+                  <ListItem>
+                    <ListItemText>
+                      You need up to 50GB of space to install
+                    </ListItemText>
+                  </ListItem>
+                </List>
               </ListItem>
             
             </List>
@@ -47,4 +67,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home 

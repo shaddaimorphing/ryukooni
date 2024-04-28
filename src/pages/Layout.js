@@ -1,4 +1,4 @@
-import { AppBar, Box, Container, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Container, Divider, Link, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material'
 import Drawer from '@mui/material/Drawer'
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
@@ -15,7 +15,7 @@ const Layout = () => {
 
     const [anchorEl, setAnchorEl] = useState(null);
 
-    const links = ['Introduction', 'Installation', 'Why Install This']
+    const links = [{text: 'Introduction', link: "/"}, {text: 'Installation', link: "install"}, {text: 'Why Install This', link: "about"}]
 
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -68,7 +68,7 @@ const Layout = () => {
                 >
                     {links.map((link) => (
                         <MenuItem sx={{fontSize: "24px"}}>
-                            {link}
+                            {link.text}
                         </MenuItem>
                     ))}
                 </Menu>
@@ -103,7 +103,7 @@ const Layout = () => {
                 {links.map((text) => (
                     <ListItem key={text} disablePadding>
                     <ListItemButton>
-                        <ListItemText primary={text} />
+                        <Link href={text.link}><ListItemText primary={text.text} /></Link>
                     </ListItemButton>
                     </ListItem>
                 ))}

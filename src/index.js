@@ -8,16 +8,18 @@ import Layout from './pages/Layout';
 import Home from './pages/Home';
 import { ThemeProvider, useTheme } from '@mui/material/styles';
 import createTheme from '@mui/material/styles/createTheme';
+import Install from './pages/Install';
+import About from './pages/About';
 
 const theme = createTheme({
   typography: {
-    fontFamily: "Ubuntu "
+    fontFamily: "Optima"
   },
   components: {
     MuiTypography: {
       variants: [
         {
-          props: { variant: 'p' },
+          props: { variant: 'h4' },
           style: {
             fontSize: '20px',
           },
@@ -60,6 +62,8 @@ root.render(
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
+            <Route path="install" element={<Install />} />
+            <Route path="about" element={<About />} />
           </Route>
         </Routes>
       </BrowserRouter>
