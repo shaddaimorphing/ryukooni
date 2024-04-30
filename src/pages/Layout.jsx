@@ -17,7 +17,7 @@ const Layout = () => {
 
     const [anchorEl, setAnchorEl] = useState(null);
 
-    const links = [{text: 'Introduction', link: "/"}, {text: 'Installation', link: "install"}, {text: 'Why Install This', link: "about"}]
+    const links = [{text: 'Introduction', link: "/ryukooni"}, {text: 'Installation', link: "install"}, {text: 'Why Install This', link: "about"}]
 
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
