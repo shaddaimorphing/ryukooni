@@ -21,41 +21,41 @@ const Home = () => {
             Requirements
           </Typography>
           <Typography variant="p" component="div">
-            <List sx={{listStyleType:"disc",
+            <List disablePadding sx={{listStyleType:"disc",
                     '& .MuiListItem-root': {
                       display: 'list-item',
                      }, pl: 4}}>
               <ListItem>
                 <ListItemText>
-                  <Typography variant="p" component="div">Final Fantasy VII for PC</Typography>
+                  <Typography variant="h4" component="div">Final Fantasy VII for PC</Typography>
                 </ListItemText>
-                <List sx={{listStyleType:"circle",
+                <List disablePadding sx={{listStyleType:"circle",
                     '& .MuiListItem-root': {
                       display: 'list-item',
                      }, pl: 4}}>
                   <ListItem>
                     <ListItemText>
-                      <Typography variant="p" component="div">Valid copies are the 97 release or the Steam release</Typography>
+                      <Typography variant="h4" component="div">Valid copies are the 97 release or the Steam release</Typography>
                     </ListItemText>
                   </ListItem>
                 </List>
               </ListItem>
               <ListItem>
                 <ListItemText>
-                  Satsuki Yatoshi
+                  <Typography variant="h4" component="div">Satsuki Yatoshi</Typography>
                 </ListItemText>
-                <List sx={{listStyleType:"circle",
+                <List disablePadding sx={{listStyleType:"circle",
                     '& .MuiListItem-root': {
                       display: 'list-item',
                      }, pl: 4}}>
                   <ListItem>
                     <ListItemText>
-                      <Link href="https://forums.qhimm.com/index.php?PHPSESSID=lglja328tm5fqpvtpkten0j7g1&topic=21616">Link</Link>
+                      <Link variant="h4" color="#ff2621" href="https://forums.qhimm.com/index.php?PHPSESSID=lglja328tm5fqpvtpkten0j7g1&topic=21616">Link</Link>
                     </ListItemText>
                   </ListItem>
                   <ListItem>
                     <ListItemText>
-                      <Typography variant="p" component="div">You need up to 50GB of space to install</Typography>
+                      <Typography variant="h4" component="div">You need up to 50GB of space to install</Typography>
                     </ListItemText>
                   </ListItem>
                 </List>
