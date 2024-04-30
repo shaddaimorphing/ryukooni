@@ -56,7 +56,7 @@ const theme = createTheme({
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/ryukooni",
     element: <Layout />,
     children: [
       {
