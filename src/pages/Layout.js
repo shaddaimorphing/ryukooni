@@ -1,4 +1,4 @@
-import { AppBar, Box, Container, Divider, Link, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Container, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material'
 import Drawer from '@mui/material/Drawer'
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
@@ -7,6 +7,8 @@ import Fade from '@mui/material/Fade';
 import MenuIcon from '@mui/icons-material/Menu';
 import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom';
+
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 const appBarHeight = 64;
@@ -66,10 +68,12 @@ const Layout = () => {
                         zIndex: 1502
                     }}
                 >
-                    {links.map((link) => (
-                        <MenuItem sx={{fontSize: "24px"}}>
-                            {link.text}
-                        </MenuItem>
+                    {links.map((text) => (
+                        <Link to={text.link} style={{ textDecoration: 'none', color: "white" }}>
+                            <MenuItem sx={{fontSize: "24px"}}>                               
+                                {text.text}                                
+                            </MenuItem>
+                        </Link>
                     ))}
                 </Menu>
             </>
@@ -101,11 +105,13 @@ const Layout = () => {
                 <Divider />
                 <List>
                 {links.map((text) => (
-                    <ListItem key={text} disablePadding>
-                    <ListItemButton>
-                        <Link href={text.link}><ListItemText primary={text.text} /></Link>
-                    </ListItemButton>
-                    </ListItem>
+                    <Link to={text.link} style={{ textDecoration: 'none', color: "white" }}>
+                        <ListItem key={text} disablePadding>
+                            <ListItemButton>
+                                <ListItemText primary={text.text}  />
+                            </ListItemButton>                        
+                        </ListItem>
+                    </Link>
                 ))}
                 </List>
             </Drawer>
@@ -115,7 +121,7 @@ const Layout = () => {
     return (
         <>
             <AppBar position="fixed" elevation={0}
-                    sx={{ width: {xs: "100%", md: `calc(100% - ${drawerWidth}px)`}, 
+                    sx={{ display: {md: "none"}, width: {xs: "100%", md: `calc(100% - ${drawerWidth}px)`}, 
                         ml: {md: `${drawerWidth}px`}, 
                         backgroundColor: "#1c1c1c" 
                     }}>
@@ -136,8 +142,8 @@ const Layout = () => {
             <Container sx={{ 
                             width: {md: `calc(100% - ${drawerWidth}px)`}, 
                             ml: {md: `calc(${drawerWidth}px + 10px)`}, 
-                            height: `calc(100% - ${appBarHeight}px)`, 
-                            mt: `calc(${appBarHeight}px + 25px)`, 
+                            height: {xs: `calc(100% - ${appBarHeight}px)`, md: "100%"}, 
+                            mt: {xs: `calc(${appBarHeight}px + 25px)`, md: "25px"}, 
                             color: "white"  
                             }}>
                 <Outlet />

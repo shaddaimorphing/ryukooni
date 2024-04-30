@@ -27,7 +27,7 @@ const Home = () => {
                      }, pl: 4}}>
               <ListItem>
                 <ListItemText>
-                  Final Fantasy VII for PC
+                  <Typography variant="p" component="div">Final Fantasy VII for PC</Typography>
                 </ListItemText>
                 <List sx={{listStyleType:"circle",
                     '& .MuiListItem-root': {
@@ -35,7 +35,7 @@ const Home = () => {
                      }, pl: 4}}>
                   <ListItem>
                     <ListItemText>
-                      Valid copies are the 97 release or the Steam release
+                      <Typography variant="p" component="div">Valid copies are the 97 release or the Steam release</Typography>
                     </ListItemText>
                   </ListItem>
                 </List>
@@ -55,7 +55,7 @@ const Home = () => {
                   </ListItem>
                   <ListItem>
                     <ListItemText>
-                      You need up to 50GB of space to install
+                      <Typography variant="p" component="div">You need up to 50GB of space to install</Typography>
                     </ListItemText>
                   </ListItem>
                 </List>
