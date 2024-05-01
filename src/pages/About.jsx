@@ -2,6 +2,8 @@ import { Divider, Stack, Typography } from '@mui/material'
 import React from 'react'
 
 const About = () => {
+    document.title = 'About - Ryuko Oni'
+
     return (
         <Stack spacing={2}>
             <Typography variant="h1" component="div">

@@ -5,6 +5,9 @@ import sywMenu from '../assets/img/SYW Menu.png'
 
 
 const Install = () => {
+
+    document.title = 'Install - Ryuko Oni'
+
     return (
         <Stack spacing={2}>
             <Typography variant="h1" component="div">

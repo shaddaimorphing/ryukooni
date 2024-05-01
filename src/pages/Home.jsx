@@ -2,6 +2,8 @@ import { Divider, Grid, Link, List, ListItem, ListItemButton, ListItemText, Stac
 import React from 'react'
 
 const Home = () => {
+
+  document.title = 'Home - Ryuko Oni'
   return (
     <Stack spacing={2}>
           <Typography variant="h1" component="div">
